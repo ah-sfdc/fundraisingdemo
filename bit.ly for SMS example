@@ -1,0 +1,9 @@
+%%[
+
+var @URL
+
+SET @URL = TRIM(HTTPGet(Concat("https://api-ssl.bitly.com/v3/shorten?access_token=Token&format=txt&longUrl=http://google.com?Email=",Email)))
+
+]%%
+
+ %%=v(TRIM(@URL))=%% 
